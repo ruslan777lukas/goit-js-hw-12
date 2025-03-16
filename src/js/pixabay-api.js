@@ -4,7 +4,7 @@ export async function getAllImages(message, page, perPage) {
   const baseURL = 'https://pixabay.com/api/';
 
   const params = {
-    key: '49074776-667ebd81d42a28579e0443e2e',
+    key: '49126238-069e1a94ee3ccc35c34a34de0',
     q: message,
     image_type: 'photo',
     orientation: 'horizontal',
