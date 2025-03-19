@@ -48,9 +48,32 @@ button {
 .gallery-list {
   list-style: none;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-group {
+  display: flex;
   flex-direction: row;
-  align-items: baseline;
+  padding: 0px;
+  justify-content: center;
   gap: 20px;
+}
+
+.sl-image {
+  border-radius: 2px;
+  box-shadow: 2px 2px 10px rgba(20, 16, 16, 0.438);
+}
+
+.gallery-subtitle {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.gallery-txt {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0px;
 }
 
 .gallery-image {

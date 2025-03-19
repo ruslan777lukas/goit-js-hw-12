@@ -20,19 +20,19 @@ export function imageTemplate(item) {
           <div class="gallery-wrapper">
             <ul class="gallery-group">
               <li class="gallery-list">
-                <h2 class="gallery-subtitle">Likes</h2>
+                <p class="gallery-subtitle">Likes</p>
                 <p class="gallery-txt">${likes}</p>
               </li>
               <li class="gallery-list">
-                <h2 class="gallery-subtitle">Views</h2>
+                <p class="gallery-subtitle">Views</p>
                 <p class="gallery-txt">${views}</p>
               </li>
               <li class="gallery-list">
-                <h2 class="gallery-subtitle">Comments</h2>
+                <p class="gallery-subtitle">Comments</p>
                 <p class="gallery-txt">${comments}</p>
               </li>
               <li class="gallery-list">
-                <h2 class="gallery-subtitle">Downloads</h2>
+                <p class="gallery-subtitle">Downloads</p>
                 <p class="gallery-txt">${downloads}</p>
               </li>
             </ul>
