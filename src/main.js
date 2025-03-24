@@ -28,7 +28,7 @@ refs.form.addEventListener('submit', searchImages);
 async function searchImages(e) {
   e.preventDefault();
   refs.gallery.innerHTML = '';
-
+  showLoader();
   const message = e.target.elements.search.value.trim();
   params.message = message;
   params.page = 1;
@@ -40,8 +40,11 @@ async function searchImages(e) {
       params.perPage
     );
 
+    hidebtnNext();
+
     if (result.hits.length === 0) {
       hidebtnNext();
+      hideLoader();
       iziToast.error({
         message:
           'Sorry, there are no images matching your search query. Please try again!',
@@ -56,10 +59,10 @@ async function searchImages(e) {
       const markup = imagesTemplate(result.hits);
       refs.gallery.innerHTML = markup;
       params.total = result.totalHits;
-
       checkBtnStatus();
 
       lightbox = new SimpleLightbox('.gallery a');
+      refs.loader.classList.add('hidden');
     }
   } catch (error) {
     refs.gallery.innerHTML = '';

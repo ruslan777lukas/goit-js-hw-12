@@ -115,9 +115,10 @@ button:hover {
   display: none;
 }
 
-.loader-text {
+.loader {
   margin-block: 48px;
   text-align: center;
+  margin: 20px;
 }
 
 .photo-card {
