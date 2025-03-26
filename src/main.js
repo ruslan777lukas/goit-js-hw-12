@@ -32,6 +32,7 @@ async function searchImages(e) {
   const message = e.target.elements.search.value.trim();
   params.message = message;
   params.page = 1;
+  hidebtnNext();
 
   try {
     const result = await getAllImages(
@@ -63,6 +64,7 @@ async function searchImages(e) {
 
       lightbox = new SimpleLightbox('.gallery a');
       refs.loader.classList.add('hidden');
+      e.target.reset();
     }
   } catch (error) {
     refs.gallery.innerHTML = '';
@@ -80,7 +82,7 @@ async function searchImages(e) {
     console.log(error);
   }
 
-  e.target.reset();
+  // e.target.reset();
 }
 
 refs.btnNext.addEventListener('click', async () => {
